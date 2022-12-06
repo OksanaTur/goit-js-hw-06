@@ -15,13 +15,15 @@ const ingredients = [
 
 const listEl = document.querySelector('#ingredients');
 
-const listFood = ingredients.forEach(ingredient => {
+const newList = []
+
+ingredients.forEach(ingredient => {
   let list = document.createElement('li');
   list.textContent = [ingredient];
   list.classList.add('item')
   // console.log(list)
-  listEl.append(list);
+  newList.push(list);
 });
-
+listEl.append(...newList)
 console.log(listEl)
 
